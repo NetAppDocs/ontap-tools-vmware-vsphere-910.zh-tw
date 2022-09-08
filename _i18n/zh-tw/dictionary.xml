@@ -1978,4 +1978,5 @@
   <block id="d9f3e338f746bd45726b28a4c9827ce1" category="sidebar">VSC和VASA Provider記錄檔</block>
   <block id="aac0bfa935c0891ccd1dbe6d4b9dc089" category="sidebar">監控資料存放區和vVols報告的效能</block>
   <block id="03e71fcc3229d7261096bb72d8cbfaf4" category="sidebar">資料存放區與虛擬機器報告的功能概述ONTAP</block>
+  <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">VMware vSphere適用的工具ONTAP</block>
 </blocks>
