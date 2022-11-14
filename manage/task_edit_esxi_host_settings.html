@@ -25,28 +25,8 @@
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
 
-  <!-- Controls AsciiDoctor Admonition Blocks -->
-  <link rel="stylesheet" type="text/css" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/font-awesome.min.css">
-
-  <!-- Controls the shadow effect for search dropdown menu -->
-  <link rel="stylesheet" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/boxshadowproperties.css">
-
-  <!-- NetApp CSS controls the technical content -->
-  <link rel="stylesheet" type="text/css" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/netapp.css">
-
-  <!-- WWW CSS Content -->
-  <link rel="stylesheet" type="text/css" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/www-luci-dotcom.min.css">
-  <link rel="stylesheet" type="text/css" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/www-netapp-dotcom.css">
-  <link rel="stylesheet" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/www-netapp-library-critical.min.css" media="all" >
-  <link rel="stylesheet" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/www-netapp-library-global-header-footer.min.css">
-
-  <!-- NetApp IE Customizations -->
-  <link rel="stylesheet" href='/zh-tw/ontap-tools-vmware-vsphere-910/css/na-utility.css' type='text/css'>
-  <link rel="stylesheet" href='/zh-tw/ontap-tools-vmware-vsphere-910/css/na-sidebar.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/ontap-tools-vmware-vsphere-910/css/clouddocs.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/ontap-tools-vmware-vsphere-910/css/custom-dropdown.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/ontap-tools-vmware-vsphere-910/css/na-pagenav.css' type='text/css'>
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/netappdocs.css">
 
   
   <link rel="stylesheet" href="/zh-tw/ontap-tools-vmware-vsphere-910/css/landing-page.css" type="text/css">
@@ -98,11 +78,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/na-search.js'></script><script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-tw/ontap-tools-vmware-vsphere-910/css/prism.css' type='text/css'>
-  <link rel='stylesheet' href='/zh-tw/ontap-tools-vmware-vsphere-910/css/prism-netapp.css' type='text/css'>
-
-
-  <script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/na-utility.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/na-search.js'></script><script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/na-pagenav.js'></script><script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/na-utility.js'></script>
   <script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/clouddocs.js'></script>
   <script src='/zh-tw/ontap-tools-vmware-vsphere-910/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -141,6 +117,17 @@
           $("#expandAll").click(function(e) {
               e.preventDefault();
               $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/zh-tw/ontap-tools-vmware-vsphere-910"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
           });
 
       });
@@ -288,6 +275,8 @@
       </div>
 
       
+      
+      
       <div class="search-property-bar">
         <div id="search-demo-container" class="searchbox n-property-bar__search">
           <div id="react-search" 
@@ -334,6 +323,10 @@
           <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere-910/manage/task_edit_esxi_host_settings.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
           <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere-910/manage/task_edit_esxi_host_settings.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/ontap-tools-vmware-vsphere-910/manage/task_edit_esxi_host_settings.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/ontap-tools-vmware-vsphere-910/manage/task_edit_esxi_host_settings.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li></ul>
     </div><!-- End Language Selector -->
 
@@ -1148,7 +1141,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 概念</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="VMware工具總覽ONTAP"
@@ -1178,7 +1171,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 角色型存取控制</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="關於以角色為基礎ONTAP 的存取控制功能之概述"
@@ -1250,7 +1243,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 部署及升級ONTAP 功能</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="VMware ONTAP vSphere的VMware vSphere更新工具使用者部署工作流程"
@@ -1287,7 +1280,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 部署ONTAP 這些功能的需求</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="VSC的連接埠需求"
@@ -1324,7 +1317,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 部署ONTAP 各種工具</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="如何下載ONTAP 功能介紹工具"
@@ -1368,7 +1361,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 升級ONTAP 功能</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="升級至ONTAP 最新版的VMware工具"
@@ -1391,7 +1384,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定ONTAP VMware工具</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="設定ONTAP 功能的工作流程"
@@ -1407,7 +1400,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定ESXi設定</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="設定ESXi伺服器多重路徑和逾時設定"
@@ -1430,7 +1423,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定客體作業系統</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="設定客體作業系統指令碼"
@@ -1474,7 +1467,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定ONTAP 「VMware Tools偏好設定」檔案</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="使用喜好設定檔設定IPV4或IPV6"
@@ -1511,7 +1504,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定儲存系統</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="儲存系統的概述ONTAP 、以瞭解各種工具"
@@ -1569,7 +1562,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定儲存功能設定檔</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="儲存功能設定檔總覽"
@@ -1599,7 +1592,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定資料存放區</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="配置傳統資料存放區"
@@ -1650,7 +1643,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 保護資料存放區和虛擬機器</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="啟用儲存複寫介面卡來保護資料存放區"
@@ -1666,7 +1659,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定儲存系統以進行災難恢復</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="設定SAN和NAS的儲存系統"
@@ -1731,7 +1724,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定受保護和恢復站台</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="設定VM儲存原則"
@@ -1761,7 +1754,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 設定受保護和恢復站台資源</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="設定網路對應"
@@ -1819,7 +1812,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 管理ONTAP 各種工具</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="管理資料存放區"
@@ -1828,7 +1821,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 管理資料存放區</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="在其他主機上掛載資料存放區"
@@ -1879,7 +1872,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 管理虛擬機器</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="移轉或複製虛擬機器的考量"
@@ -1916,7 +1909,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 存取ONTAP VMware工具維護主控台</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="功能概述：工具維護主控台ONTAP"
@@ -1967,7 +1960,7 @@
     ><a href="#">
         <div class="na-navbar-padding"> 監控資料存放區和vVols報告的效能</div>
       </a>
-      <ul>
+      <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
       data-pdf-filename="資料存放區與虛擬機器報告的功能概述ONTAP"
@@ -2007,6 +2000,7 @@
 </script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
 
 
   </div>
@@ -2205,11 +2199,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <span class="n-footer__fine-print">對我們的網站有任何意見或要求？</span>
-              <a target="_self" href="javascript:netapp_mailto()">請與我們聯絡</a>
-            </li>
-            <li class="n-footer__copyright-link">
-              <a href="https://docs.netapp.com/zh-tw/announcements/">公告</a>
+              <a target="_self" href="javascript:netapp_mailto()">傳送有關本網頁的意見反應</a>
             </li>
           </ul>
         </div>
