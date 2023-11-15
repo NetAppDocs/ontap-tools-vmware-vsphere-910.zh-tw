@@ -79,7 +79,6 @@
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定的逾時時間間隔為最大值。您不需要等待達到最大逾時時間。大多數命令都會在設定的最大逾時時間間隔內完成。</block>
   <block id="e8e75924ea6b1743aedaf9cdc60f2811" category="paragraph">您也應該設定SRA在vvol.properties檔案：offtap.operation.timeout.period.seconds=86400中執行單一作業的最長時間。</block>
   <block id="0a757269d3671e08f4647a4a3f39c7af" category="inline-link">NetApp知識庫答案100111111：《ONTAP NetApp儲存複寫介面卡4.0/7.X for VMware Sizing Guide》</block>
-  <block id="61497a3ce40a5b82feed85f8793d337b" category="paragraph"><block ref="61497a3ce40a5b82feed85f8793d337b" category="inline-link-rx"></block></block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">有關修改SAN Provider設定的VMware文件有更多資訊。</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">VMware Site Recovery Manager文件：變更儲存設定</block>
   <block id="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="paragraph"><block ref="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="inline-link-rx"></block></block>
@@ -1058,8 +1057,6 @@
   <block id="ce43109be12a788edaee29a0960ca9c7" category="list-text">系統管理程式9.8P1或更新版本ONTAP</block>
   <block id="b36e85751d57920856a667a70fbd44c3" category="paragraph"><block ref="b36e85751d57920856a667a70fbd44c3" category="inline-link-macro-rx"></block></block>
   <block id="3932191a381dc130ecf8b7f97d887769" category="list-text">RBAC使用者建立工具ONTAP （若使用ONTAP 的是32個以上版本）</block>
-  <block id="3c25e2e440e9f31af6d29f0e44415780" category="inline-link">適用於VSC、VASA Provider和Storage Replication Adapter 7.0的RBAC使用者建立工具、適用於VMware vSphere</block>
-  <block id="6490af081af6fea3ac5350f6812a0057" category="paragraph"><block ref="6490af081af6fea3ac5350f6812a0057" category="inline-link-rx"></block></block>
   <block id="5bc83c5da5e874a1f3cd46def8b7086a" category="paragraph">每ONTAP 個功能都有一個相關的使用者名稱和密碼配對、構成該角色的認證資料。如果您未使用這些認證登入、則無法存取與該角色相關的儲存作業。</block>
   <block id="92bedc01b7222f50b165fadee33a0cdd" category="paragraph">作為安全措施、VSC特定ONTAP 的功能性角色會依階層順序排列。這表示第一個角色是最嚴格的角色、只有與最基本的VSC儲存作業集相關的權限。下一個角色同時包含自己的權限、以及與先前角色相關的所有權限。對於支援的儲存作業、每個額外角色的限制都較少。</block>
   <block id="92e1f75474e9be7c3cf34b3eb30f325e" category="paragraph">以下是ONTAP 使用VSC時建議使用的部分RBAC角色。建立這些角色之後、您可以將角色指派給必須執行儲存相關工作的使用者、例如資源配置虛擬機器。</block>
@@ -1159,7 +1156,6 @@
   <block id="ac9f97a99a048cbef4e6c1dd7488effe" category="paragraph">若要建立新的使用者、並將叢集或SVM連線ONTAP 至VMware Tools、您應該執行下列步驟：</block>
   <block id="96b45b5c5a5b2f7e3a48deff64fa2da7" category="list-text">建立叢集管理員或SVM管理員角色</block>
   <block id="24712951dbf027dbf6c455a04c052ac4" category="admonition">您可以使用下列其中一項來建立這些角色：</block>
-  <block id="6b2d93598a0b579fbc8c679697788778" category="paragraph"><block ref="6b2d93598a0b579fbc8c679697788778" category="inline-link-rx"></block></block>
   <block id="69e3a1dff1352bb06840dbcbff566e40" category="list-text">使用ONTAP NetApp建立已指派角色的使用者、並使用NetApp建立適當的應用程式集</block>
   <block id="a4e90f544f0d8ede6e2023d539fef693" category="paragraph">您需要這些儲存系統認證資料、才能設定VSC的儲存系統。您可以在VSC中輸入認證資料、為VSC設定儲存系統。每次使用這些認證登入儲存系統時、您都有權使用ONTAP 在建立認證時於各處設定的VSC功能。</block>
   <block id="82e8b78ffb3455f0a5df307de255c3dc" category="list-text">將儲存系統新增至VSC、並提供您剛建立之使用者的認證資料</block>
@@ -1600,7 +1596,6 @@
   <block id="1b837800f24f729eb8e73a102257c0bd" category="admonition">如果您使用ASA All SAN Array（更新版本）類型的儲存平台ONTAP 搭配使用、則只能建立vmdk大小大於16TB的vVols資料存放區。</block>
   <block id="d78120895b47b61a42063d7f497c4cc0" category="list-text">在vSphere Client首頁中、按一下*主機與叢集*。</block>
   <block id="0e6fc56cbe91d72cb03e33a904ae9ab3" category="list-text">在導覽窗格中、選取包含資料存放區的資料中心。</block>
-  <block id="a15d1bf5dee929fddbf2e03ae0f830e9" category="list-text">在資料存放區上按一下滑鼠右鍵、然後選取「* NetApp ONTAP S庫 工具*&gt;*指派QoS*」。</block>
   <block id="425e99780c82b74f333dd7da3068f492" category="list-text">在「調整大小」對話方塊中、指定資料存放區的新大小、然後按一下「*確定*」。</block>
   <block id="29b33d6a4971ded7e90ffb22fa8e685d" category="paragraph">您可以執行「Storage Systems（儲存系統）」功能表中的「*重新探索全部*」選項、手動更新「Storage Systems and Dashboard（儲存系統和儀表板）」下的儲存清單、或等待下次排程的重新整理。</block>
   <block id="2cc96f4cfa06f8c6cf0c5afbf01bcf96" category="summary">您必須驗證vVols儀表板的一些重要需求、才能顯示VMware虛擬磁碟區（vVols\）資料存放區和虛擬機器的動態詳細資料。</block>
@@ -1974,7 +1969,6 @@
   <block id="d9f3e338f746bd45726b28a4c9827ce1" category="sidebar">VSC和VASA Provider記錄檔</block>
   <block id="aac0bfa935c0891ccd1dbe6d4b9dc089" category="sidebar">監控資料存放區和vVols報告的效能</block>
   <block id="03e71fcc3229d7261096bb72d8cbfaf4" category="sidebar">資料存放區與虛擬機器報告的功能概述ONTAP</block>
-  <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">VMware vSphere適用的工具ONTAP</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -1983,4 +1977,6 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="389adae702b47ad2c98095885b166665" category="paragraph"><block ref="389adae702b47ad2c98095885b166665" category="inline-link-rx"></block></block>
+  <block id="bdc5a4ba1115f3f724e1f81e7f41eeef" category="list-text">在資料存放區上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* &gt; * Resize non-vVols datastore* 。</block>
 </blocks>

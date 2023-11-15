@@ -20,9 +20,6 @@ summary: 您可以設定數ONTAP 個建議的VMware vCenter功能、以搭配ONT
 link:../configure/task_configure_user_role_and_privileges.html["設定使用者角色和權限"]
 
 * RBAC使用者建立工具ONTAP （若使用ONTAP 的是32個以上版本）
-+
-https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203["適用於VSC、VASA Provider和Storage Replication Adapter 7.0的RBAC使用者建立工具、適用於VMware vSphere"]
-
 
 
 每ONTAP 個功能都有一個相關的使用者名稱和密碼配對、構成該角色的認證資料。如果您未使用這些認證登入、則無法存取與該角色相關的儲存作業。

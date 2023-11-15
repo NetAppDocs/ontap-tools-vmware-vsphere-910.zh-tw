@@ -9,9 +9,9 @@ entries:
   - title: 調整資料存放區大小
     url: "/manage/task_resize_datastores.html"
   - title: 編輯vVols資料存放區
-    url: "/manage/task_edit_a_vvols_datastore.html"
+    url: "/manage/task_edit_a_vvol_datastore.html"
   - title: 將儲存設備新增至vVols資料存放區
-    url: "/manage/task_add_storage_to_a_vvols_datastore.html"
+    url: "/manage/task_add_storage_to_a_vvol_datastore.html"
   - title: 從vVols資料存放區移除儲存設備
     url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
   - title: 掛載vVols資料存放區

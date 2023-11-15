@@ -30,9 +30,6 @@ NOTE: 您可以使用下列其中一項來建立這些角色：
 link:../configure/task_configure_user_role_and_privileges.html["設定使用者角色和權限"]
 
 ** RBAC使用者建立工具ONTAP （若使用ONTAP 的是32個以上版本）
-+
-https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203/t5/Virtualization-Articles-and-Resources/How-to-use-the-RBAC-User-Creator-for-Data-ONTAP/ta-p/86601["適用於VSC、VASA Provider和Storage Replication Adapter 7.0的RBAC使用者建立工具、適用於VMware vSphere"]
-
 
 
 * 使用ONTAP NetApp建立已指派角色的使用者、並使用NetApp建立適當的應用程式集
